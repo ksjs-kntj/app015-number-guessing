@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>app015-number-guessing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>🎯 数字当てゲーム（1〜10）</h1>
+    <p class="muted">1〜10 の数字を入力して「答える」を押してね。</p>
+
+    <section class="card">
+      <div class="row">
+        <label for="guessInput" class="label">あなたの答え</label>
+        <input 
+          id="guessInput"
+          class="input"
+          type="number"
+          min="1"
+          max="10"
+          placeholder="1〜10の数字"
+          aria-label="1から10の数字を入力"
+        >
+      </div>
+
+      <div class="actions">
+        <button id="guessBtn" class="btn primary">答える</button>
+        <button id="resetBtn" class="btn">リセット</button>
+      </div>
+
+      <p id="result" class="result">結果：-</p>
+    </section>
+
+    <details class="notes">
+      <summary>遊び方とヒント</summary>
+      <ul>
+        <li>入力欄は <code>value</code>、結果表示は <code>textContent</code> を使うよ。</li>
+        <li>正解の作成は <code>Math.random()</code> と <code>Math.floor()</code>。</li>
+        <li>判定は <code>if</code> 文で「大きい／小さい／正解」。</li>
+      </ul>
+    </details>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
